@@ -1,0 +1,111 @@
+import 'package:flutter/material.dart';
+
+class SignUpPage extends StatelessWidget {
+  const SignUpPage({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: Colors.white,
+      body: Center(
+        child: Padding(
+          padding: EdgeInsets.symmetric(horizontal: 20.0),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text(
+                "sign up",
+                style: TextStyle(
+                    color: Colors.black87,
+                    fontWeight: FontWeight.bold,
+                    fontSize: 35),
+              ),
+              SizedBox(height: 20),
+              Row(
+                children: [
+                  Expanded(
+                    child: TextFormField(
+                      decoration: InputDecoration(
+                          labelText: "First name",
+                          border: OutlineInputBorder(
+                              borderRadius: BorderRadius.circular(30))),
+                      style: TextStyle(color: Colors.white),
+                    ),
+                  ),
+                  SizedBox(width: 15),
+                  Expanded(
+                    child: TextFormField(
+                      decoration: InputDecoration(
+                          labelText: "Last name",
+                          border: OutlineInputBorder(
+                              borderRadius: BorderRadius.circular(30))),
+                      style: TextStyle(color: Colors.white),
+                    ),
+                  ),
+                ],
+              ),
+              const SizedBox(height: 20),
+              TextFormField(
+                decoration: InputDecoration(
+                  labelText: "Email",
+                  border: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(30)),
+                ),
+                style: TextStyle(color: Colors.white),
+              ),
+              const SizedBox(height: 20),
+              TextFormField(
+                decoration: InputDecoration(
+                  labelText: "Phone number",
+                  border: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(30)),
+                ),
+                style: TextStyle(color: Colors.white),
+              ),
+              const SizedBox(height: 20),
+              TextFormField(
+                decoration: InputDecoration(
+                  labelText: "Password",
+                  border: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(30)),
+                  suffixIcon: Icon(Icons.visibility),
+                ),
+                style: TextStyle(color: Colors.white),
+              ),
+              const SizedBox(height: 20),
+              TextFormField(
+                decoration: InputDecoration(
+                    labelText: "Confirm Password",
+                    border: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(30)),
+                    suffixIcon: Icon(
+                      Icons.visibility,
+                    )),
+                style: TextStyle(color: Colors.white),
+              ),
+              const SizedBox(height: 10),
+              SizedBox(
+                width: double.infinity,
+                child: ElevatedButton(
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: Colors.black87,
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(30),
+                    ),
+                    padding: EdgeInsets.symmetric(vertical: 15),
+                  ),
+                  onPressed: () {},
+                  child: const Text(
+                    'Sign up',
+                    style: TextStyle(fontSize: 18, color: Colors.white),
+                  ),
+                ),
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}
