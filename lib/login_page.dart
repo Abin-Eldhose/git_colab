@@ -5,25 +5,5 @@ class LoginPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return  SafeArea(
-        child: Scaffold(
-      body: Padding(
-        padding: EdgeInsets.all(20),
-        child: Column(
-          children: [
-            Text(
-              "Welcome Back",
-              style: TextStyle(
-                  color: Colors.black,
-                  fontSize: 35,
-                  fontWeight: FontWeight.bold),
-            ),
-            TextFormField()
-          ],
-
-
-        ),
-      ),
-    ));
   }
 }
