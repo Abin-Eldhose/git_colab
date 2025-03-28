@@ -103,14 +103,14 @@ class SignUpPage extends StatelessWidget {
                   ),
                 ),
               ),
-              SizedBox(height: 50),
+              const SizedBox(height: 50),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Text(
-                    "Already have an accound?",
+                  const Text(
+                    "Already have an account?",
                     style: TextStyle(
-                        color: const Color.fromARGB(179, 255, 255, 255),
+                        color: Color.fromARGB(179, 255, 255, 255),
                         fontSize: 14),
                   ),
                   TextButton(
@@ -118,9 +118,9 @@ class SignUpPage extends StatelessWidget {
                         Navigator.push(
                             context,
                             MaterialPageRoute(
-                                builder: (context) => LoginPage()));
+                                builder: (context) => const LoginPage()));
                       },
-                      child: Text(
+                      child: const Text(
                         "sign in",
                         style: TextStyle(color: Colors.red),
                       )),
