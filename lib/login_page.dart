@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:git_colab/Home_page.dart';
+import 'package:git_colab/sign_up_page.dart';
 
 class LoginPage extends StatelessWidget {
   const LoginPage({super.key});
@@ -9,7 +11,8 @@ class LoginPage extends StatelessWidget {
         child: Scaffold(
       body: Padding(
         padding: const EdgeInsets.all(20),
-        child: Column(
+        child: Column(crossAxisAlignment: CrossAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
             const Center(
               child: Text(
@@ -76,13 +79,66 @@ class LoginPage extends StatelessWidget {
             SizedBox(
               width: double.infinity,
               child: ElevatedButton(
-                  onPressed: () {},
+                  onPressed: () {Navigator.push(context, MaterialPageRoute(builder: (context) => HomePage(),));},
                   style:
                       ElevatedButton.styleFrom(backgroundColor: Colors.black),
                   child: const Text(
                     "Login",
                     style: TextStyle(color: Colors.white),
                   )),
+            ),
+            SizedBox(
+              height: 20,
+            ),
+            Text(
+              "Or Register With",
+              style:
+                  TextStyle(color: Colors.black, fontWeight: FontWeight.bold),
+            ),
+            SizedBox(
+              height: 20,
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              children: [
+                Image.network(
+                  "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSdP6AKFlNa3Afg4RJOp7OtR7RGRrlPE2KbLg&s",
+                  height: 50,
+                  width: 50,
+                ),
+                Image.network(
+                  "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTtfbcYeYgf0wQJ-LSPm3CPbyB7T1p0f5bnaA&s",
+                  height: 50,
+                  width: 50,
+                ),
+                Image.network(
+                  "https://1000logos.net/wp-content/uploads/2016/10/Apple-Logo.png",
+                  height: 70,
+                  width: 100,
+                )
+              ],
+            ),
+            SizedBox(
+              height: 25,
+            ),
+            Row(mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                Text(
+                  "Dont Have An Account",
+                  style: TextStyle(
+                      color: Colors.black,
+                      fontSize: 18,
+                      fontWeight: FontWeight.bold),
+                ),
+                TextButton(
+                    onPressed: () {Navigator.push(context, MaterialPageRoute(builder: (context) => SignUpPage(),));},
+                    child: Text(
+                      "Sign Up",
+                      style: TextStyle(
+                          color: Colors.blueAccent,
+                          fontWeight: FontWeight.bold,fontSize: 20),
+                    ))
+              ],
             )
           ],
         ),
