@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:git_colab/bottom_nav_bar.dart';
 
 import 'package:git_colab/sign_up_page.dart';
 
@@ -19,7 +20,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const SignUpPage(),
+      home: const BottomNavBar(),
     );
   }
 }

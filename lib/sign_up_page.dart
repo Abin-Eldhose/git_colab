@@ -109,9 +109,7 @@ class SignUpPage extends StatelessWidget {
                 children: [
                   const Text(
                     "Already have an account?",
-                    style: TextStyle(
-                        color: Color.fromARGB(179, 255, 255, 255),
-                        fontSize: 14),
+                    style: TextStyle(color: Colors.black87, fontSize: 14),
                   ),
                   TextButton(
                       onPressed: () {
