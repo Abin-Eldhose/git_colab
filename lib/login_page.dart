@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:git_colab/Home_page.dart';
+import 'package:git_colab/home_page.dart';
 import 'package:git_colab/sign_up_page.dart';
 
 class LoginPage extends StatelessWidget {
