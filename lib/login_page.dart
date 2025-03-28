@@ -8,10 +8,10 @@ class LoginPage extends StatelessWidget {
     return SafeArea(
         child: Scaffold(
       body: Padding(
-        padding: EdgeInsets.all(20),
+        padding: const EdgeInsets.all(20),
         child: Column(
           children: [
-            Center(
+            const Center(
               child: Text(
                 "Welcome Back\n        Please Login...",
                 style: TextStyle(
@@ -20,48 +20,48 @@ class LoginPage extends StatelessWidget {
                     fontWeight: FontWeight.bold),
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 50,
             ),
             TextFormField(
                 decoration: InputDecoration(
                     border: OutlineInputBorder(
-                        borderSide: BorderSide(
+                        borderSide: const BorderSide(
                           color: Colors.black,
                           width: 2,
                         ),
                         borderRadius: BorderRadius.circular(20)),
                     focusedBorder: OutlineInputBorder(
-                        borderSide: BorderSide(color: Colors.black),
+                        borderSide: const BorderSide(color: Colors.black),
                         borderRadius: BorderRadius.circular(20)),
                     hintText: "Enter Your Email",
-                    suffixIcon: Icon(
+                    suffixIcon: const Icon(
                       Icons.mail,
                       color: Colors.black,
                     ))),
-            SizedBox(
+            const SizedBox(
               height: 20,
             ),
             TextFormField(
                 decoration: InputDecoration(
                     border: OutlineInputBorder(
-                        borderSide: BorderSide(
+                        borderSide: const BorderSide(
                           color: Colors.black,
                           width: 2,
                         ),
                         borderRadius: BorderRadius.circular(20)),
                     focusedBorder: OutlineInputBorder(
-                        borderSide: BorderSide(color: Colors.black),
+                        borderSide: const BorderSide(color: Colors.black),
                         borderRadius: BorderRadius.circular(20)),
                     hintText: "Enter Your Password",
-                    suffixIcon: Icon(
+                    suffixIcon: const Icon(
                       Icons.lock,
                       color: Colors.black,
                     ))),
-            SizedBox(
+            const SizedBox(
               height: 20,
             ),
-            Row(
+            const Row(
               mainAxisAlignment: MainAxisAlignment.end,
               children: [
                 Text(
@@ -70,19 +70,19 @@ class LoginPage extends StatelessWidget {
                 )
               ],
             ),
-            SizedBox(
+            const SizedBox(
               height: 20,
             ),
             SizedBox(
               width: double.infinity,
               child: ElevatedButton(
                   onPressed: () {},
-                  child: Text(
+                  style:
+                      ElevatedButton.styleFrom(backgroundColor: Colors.black),
+                  child: const Text(
                     "Login",
                     style: TextStyle(color: Colors.white),
-                  ),
-                  style:
-                      ElevatedButton.styleFrom(backgroundColor: Colors.black)),
+                  )),
             )
           ],
         ),
