@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 
 class SettingsPage extends StatelessWidget {
@@ -7,7 +6,9 @@ class SettingsPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const Scaffold(
-      body: Center(child: Text("settings page.."),),
+      body: Center(
+        child: Text("settings page.."),
+      ),
     );
   }
 }
