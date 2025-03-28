@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:git_colab/login_page.dart';
 
 class SignUpPage extends StatelessWidget {
   const SignUpPage({super.key});
@@ -84,7 +85,7 @@ class SignUpPage extends StatelessWidget {
                     )),
                 style: TextStyle(color: Colors.white),
               ),
-              const SizedBox(height: 10),
+              const SizedBox(height: 20),
               SizedBox(
                 width: double.infinity,
                 child: ElevatedButton(
@@ -101,6 +102,29 @@ class SignUpPage extends StatelessWidget {
                     style: TextStyle(fontSize: 18, color: Colors.white),
                   ),
                 ),
+              ),
+              SizedBox(height: 50),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Text(
+                    "Already have an accound?",
+                    style: TextStyle(
+                        color: const Color.fromARGB(179, 255, 255, 255),
+                        fontSize: 14),
+                  ),
+                  TextButton(
+                      onPressed: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => LoginPage()));
+                      },
+                      child: Text(
+                        "sign in",
+                        style: TextStyle(color: Colors.red),
+                      )),
+                ],
               ),
             ],
           ),
